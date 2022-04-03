@@ -1,0 +1,9 @@
+<form action="">
+  <ion-label>Cours name</ion-label>
+  <ion-input [(ngModel)]="cours.name" name="name" placeholder="Nom du cours"></ion-input>
+  <ion-label>Cours professeur</ion-label>
+  <ion-input [(ngModel)]="cours.professeur" name="professeur" placeholder="Nom du professeur"></ion-input>
+  <ion-label>Cours nbEleves</ion-label>
+  <ion-input [(ngModel)]="cours.nbEleves" name="nbEleves" placeholder="Nombre d'élèves"></ion-input>
+  <ion-button (click)="ajoutCours(cours)">+</ion-button>
+</form>

@@ -1,0 +1,9 @@
+<ion-content>
+  <ion-label>Myprop: {{myprop}}</ion-label>
+  <ion-list>
+
+    <ion-item *ngFor="let elt of nb" (click)="closePopover(elt)">Menu item {{elt}} </ion-item>
+
+  </ion-list>
+
+</ion-content>

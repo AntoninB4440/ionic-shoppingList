@@ -1,20 +1,37 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
+
+    <button *ngIf="prompEvent" (click)="onInstall()">Install PWA</button>
+
     <ion-title>
-      Blank
+      Header de la page
     </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- <ion-buttons slot="end">
+      <ion-button (click)="openMenu($event)">
+        <ion-icon slot="icon-only"
+                  ios="ellipsis-horizontal"
+                  md="ellipsis-vertical">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p><a routerLink="/saisie-cours">Accéder au formulaire de cours</a></p>
+    <p><a routerLink="/cours">Accès à la liste de cours</a></p>
+    <p><a routerLink="/gallery">Accès à la photo gallery</a></p>
+    <button (click)="presentAlert()">Ouvrir l'alerte</button>
   </div>
+
 </ion-content>

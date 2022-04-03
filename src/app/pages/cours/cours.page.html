@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{title}}</ion-title>
+    <a routerLink="/home">Home</a>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-list inset="true">
+    <ion-item *ngFor="let cours of listeCours">
+      <ion-button color="danger" (click)="showAlertDelete(cours)">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+      <ion-button color="secondary" (click)="showAlertUpdate(cours)">
+        <ion-icon name="pencil"></ion-icon>
+      </ion-button>
+      <ion-card>
+
+        <ion-card-header>
+          <ion-card-subtitle>{{cours.professeur}}</ion-card-subtitle>
+          <ion-card-title>{{cours.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Nb élèves : {{cours.nbEleves}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+
+  </ion-list>
+
+  <!-- <app-saisie (coursEvent)="submitCours($event)"></app-saisie> -->
+
+</ion-content>

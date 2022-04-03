@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>saisieCours</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formCours" novalidate (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="stacked">Cours name</ion-label>
+        <ion-input placeholder="Nom du cours" formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Cours professeur</ion-label>
+        <ion-input placeholder="Nom du professeur" formControlName="professeur"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Cours nbEleves</ion-label>
+        <ion-input placeholder="Nombre d'élèves" formControlName="nbEleves"></ion-input>
+      </ion-item>
+    <ion-button type="submit">Ajouter le cours</ion-button>
+  </form>
+
+</ion-content>
